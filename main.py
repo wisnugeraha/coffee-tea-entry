@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""make.fun entry - One Letter: Coffee or Tea.
+"""make.fun entry for "One Letter: Coffee or Tea".
 
-The gate wants exactly one character in /output/entry.txt:
-A for coffee, B for tea, nothing else (no word, no punctuation).
+Rule: the judge reads exactly one letter and nothing else -
+A for coffee, B for tea, no word, no explanation, no punctuation.
+This program writes that single letter as UTF-8 to /output/entry.txt
+(1 to 1 characters, never just white space, no trailing newline).
+We answer A: coffee.
 """
 import os
 
