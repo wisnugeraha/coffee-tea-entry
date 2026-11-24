@@ -5,8 +5,13 @@ Entry: A
 """
 import os
 
+ENTRY_LETTER = 'A'
+MAX_LEN = 1
+
 def main():
-    entry = 'A'
+    entry = ENTRY_LETTER
+    if len(entry) > MAX_LEN:
+        raise ValueError(f"Entry exceeds {MAX_LEN} char(s)")
     out = "/output/entry.txt"
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w") as f:
