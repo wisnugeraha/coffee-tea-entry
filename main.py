@@ -1,22 +1,21 @@
 #!/usr/bin/env python3
-"""make.fun entry - writes the competition text to /output/entry.txt
+"""make.fun entry - One Letter: Coffee or Tea.
 
-Entry: A
+The gate wants exactly one character in /output/entry.txt:
+A for coffee, B for tea, nothing else.
 """
 import os
 
-ENTRY_LETTER = 'A'
-MAX_LEN = 1
+LETTER = "A"
+
 
 def main():
-    entry = ENTRY_LETTER
-    if len(entry) > MAX_LEN:
-        raise ValueError(f"Entry exceeds {MAX_LEN} char(s)")
     out = "/output/entry.txt"
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    with open(out, "w") as f:
-        f.write(entry)
-    print(f"Wrote entry to {out}")
+    with open(out, "w", encoding="utf-8") as f:
+        f.write(LETTER)
+    print("entry:", LETTER)
+
 
 if __name__ == "__main__":
     main()
